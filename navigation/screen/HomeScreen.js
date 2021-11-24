@@ -2,18 +2,16 @@ import * as React from 'react';
 import { Component, useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image, ImageBackgroundBase } from 'react-native';
 import axios from 'axios';
-//import gambar from '../../public/gambar.json';
 
 export default function HomeScreen({ navigation }) {
 
   const [data, setData] = useState([]);
-  const gambar = require('../../public/gambar.json')
   /* useEffect(() => {
     axios
-      .get('gambar.json')
+      .get('https://id.wikipedia.org/api/rest_v1/page/summary/Indonesia')
       .then((data) => {
         console.log(data.data);
-        setData(data.data);
+        //setData(data.data);
       })
       .catch((error) => {
         console.log(error);
@@ -33,13 +31,12 @@ export default function HomeScreen({ navigation }) {
           <Text style={{ fontSize: 20, color: 'black' }}>BASIC INFORMATION</Text>
         </View>
         <View>
-          {data.map((result) => {
-            return (
-              <Image
-                gambar
-              />
-            )
-          })}
+        <Image
+          source={{
+            uri: 'https://www.pngkey.com/png/full/375-3751168_indonesia-map-png.png',
+          }}
+          style={styles.mapStyle}
+        />
         </View>
       </View>
     </View>
@@ -64,5 +61,10 @@ const styles = StyleSheet.create({
     paddingBottom: 7,
     paddingLeft: 15,
     width: 375,
+  },
+  mapStyle:{
+    height: 140,
+    width: 385,
+    top: 40
   }
 })
