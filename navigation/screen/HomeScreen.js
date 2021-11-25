@@ -86,6 +86,7 @@ export default function HomeScreen({ navigation }) {
               </View>
             )}
           />
+          <View style={{paddingTop:10}}></View>
         </View>
       </View>
     </ScrollView >

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, Image } from 'react-native';
+import { View, Image, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import HomeScreen from './screen/HomeScreen';
@@ -20,14 +20,13 @@ export default function MainContainer() {
             <Tab.Navigator
                 initialRouteName={homeName}
                 tabBarOptions={{
+                    showLabel: false,
                     style: {
-                        position: 'absolute',
-                        bottom: 25,
-                        left: 20,
-                        right: 20,
+                        paddingBottom: 10,
+                        padding: 10,
                         backgroundColor: '#fff',
                         borderRadius: 15,
-                        height: 90
+                        height: 70
                     }
                 }}
             >
@@ -41,9 +40,10 @@ export default function MainContainer() {
                                 style={{
                                     width: 35,
                                     height: 35,
-                                    tintColor: focused ? '#2279e2' : 'grey'
+                                    tintColor: focused ? '#c90e0e' : 'grey'
                                 }}
                             />
+                            <Text style={{color: focused ? '#c90e0e' : 'grey'}}>HOME</Text>
                         </View>
                     )
                 }} />
@@ -56,9 +56,10 @@ export default function MainContainer() {
                                 style={{
                                     width: 35,
                                     height: 35,
-                                    tintColor: focused ? '#2279e2' : 'grey'
+                                    tintColor: focused ? '#c90e0e' : 'grey'
                                 }}
                             />
+                            <Text style={{color: focused ? '#c90e0e' : 'grey'}}>UNIQUE</Text>
                         </View>
                     )
                 }}/>
@@ -71,9 +72,10 @@ export default function MainContainer() {
                                 style={{
                                     width: 35,
                                     height: 35,
-                                    tintColor: focused ? '#2279e2' : 'grey'
+                                    tintColor: focused ? '#c90e0e' : 'grey'
                                 }}
                             />
+                            <Text style={{color: focused ? '#c90e0e' : 'grey'}}>ABOUT</Text>
                         </View>
                     )
                 }}/>

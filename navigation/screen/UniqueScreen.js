@@ -41,6 +41,7 @@ export default function UniqueScreen({ navigation }) {
                   </View>
                 )} />
             </View>
+            <View style={{paddingTop:10}}></View>
             <View style= {styles.uniqueInfo}>
               <Text style={{ fontSize: 20, color: '#232323', fontWeight: 'bold' }}>2. Indonesia itu besar sekali!</Text>
               <FlatList
@@ -51,6 +52,40 @@ export default function UniqueScreen({ navigation }) {
                   </View>
                 )} />
             </View>
+            <View style={{paddingTop:10}}></View>
+            <View style= {styles.uniqueInfo}>
+              <Text style={{ fontSize: 20, color: '#232323', fontWeight: 'bold' }}>3. Indonesia punya banyak sekali bahasa!</Text>
+              <FlatList
+                data={data.unique}
+                renderItem={({ item }) => (
+                  <View style={styles.content}>
+                    <Text style={styles.contentFont}>{item.totallang}</Text>
+                  </View>
+                )} />
+            </View>
+            <View style={{paddingTop:10}}></View>
+            <View style= {styles.uniqueInfo}>
+              <Text style={{ fontSize: 20, color: '#232323', fontWeight: 'bold' }}>4. Indonesia punya sejarah Asian Games!</Text>
+              <FlatList
+                data={data.unique}
+                renderItem={({ item }) => (
+                  <View style={styles.content}>
+                    <Text style={styles.contentFont}>{item.asiangames}</Text>
+                  </View>
+                )} />
+            </View>
+            <View style={{paddingTop:10}}></View>
+            <View style= {styles.uniqueInfo}>
+              <Text style={{ fontSize: 20, color: '#232323', fontWeight: 'bold' }}>5. Indonesia ternyata antarbenua!</Text>
+              <FlatList
+                data={data.unique}
+                renderItem={({ item }) => (
+                  <View style={styles.content}>
+                    <Text style={styles.contentFont}>{item.continent}</Text>
+                  </View>
+                )} />
+            </View>
+            <View style={{paddingTop:10}}></View>
           </View>
         </View>
       </View>
