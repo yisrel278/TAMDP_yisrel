@@ -1,25 +1,30 @@
 import * as React from 'react';
 import { Component, useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Image, ImageBackgroundBase } from 'react-native';
+import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
 import axios from 'axios';
+import { FLIPPED_ALIAS_KEYS } from '@babel/types';
 
 export default function HomeScreen({ navigation }) {
 
   const [data, setData] = useState([]);
-  /* useEffect(() => {
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
     axios
-      .get('https://id.wikipedia.org/api/rest_v1/page/summary/Indonesia')
+      .get('https://mocki.io/v1/0ae19f55-ed7a-4578-b054-41cfae2e17e3')
       .then((data) => {
-        console.log(data.data);
-        //setData(data.data);
+        setData(data.data);
       })
       .catch((error) => {
         console.log(error);
-      });
-  }, []); */
+      })
+      .finally(() => setLoading(false));
+
+  }, []);
 
   return (
     <View style={styles.container}>
+      {isLoading ? <Text>Loading...</Text> : <Text></Text>}
       <View style={styles.textTitle}>
         <Text
           onPress={() => navigation.navigate('Home')}
@@ -31,12 +36,20 @@ export default function HomeScreen({ navigation }) {
           <Text style={{ fontSize: 20, color: 'black' }}>BASIC INFORMATION</Text>
         </View>
         <View>
-        <Image
-          source={{
-            uri: 'https://www.pngkey.com/png/full/375-3751168_indonesia-map-png.png',
-          }}
-          style={styles.mapStyle}
-        />
+          <Image
+            source={{
+              uri: 'https://www.pngkey.com/png/full/375-3751168_indonesia-map-png.png',
+            }}
+            style={styles.mapStyle}
+          />
+        </View>
+        <View style={styles.content}>
+          <FlatList
+            basic={data.basic}
+            renderItem={({item}) => (
+              <Text style={styles.contentFont}>Nama   : {item.name}</Text>
+            )}
+          />
         </View>
       </View>
     </View>
@@ -45,6 +58,7 @@ export default function HomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1
   },
   textTitle: {
     alignItems: 'flex-start',
@@ -62,9 +76,17 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     width: 375,
   },
-  mapStyle:{
+  mapStyle: {
     height: 140,
     width: 385,
     top: 40
+  },
+  content: {
+    fontSize: 17,
+    paddingTop: 60,
+  },
+  contentFont: {
+    fontSize: 15,
+    color: 'black'
   }
 })

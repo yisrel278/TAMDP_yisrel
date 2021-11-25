@@ -1,0 +1,44 @@
+{
+  "basic": [
+    {
+      "name": "Negara Kesatuan Republik Indonesia",
+      "motto": "Bhinneka Tunggal Ika",
+      "flag": "Sang Saka Merah Putih",
+      "emblem": "Garuda",
+      "anthem": "Indonesia Raya (Great Indonesia)",
+      "capital": "Jakarta",
+      "language": "Bahasa Indonesia",
+      "religion": [
+        {
+          "id1": "Islam",
+          "id2": "Kristen",
+          "id3": "Katolik",
+          "id4": "Hindu",
+          "id5": "Buddha",
+          "id6": "Konghucu"
+        }
+      ],
+      "president": "Joko Widodo",
+      "independence": "17 Agustus 1945",
+      "landarea": 1916906.77,
+      "islands": "16771 pulau (src: kkp.go.id)",
+      "population": "273,5 juta (2020)",
+      "populationrank": "4",
+      "gdp": "1,058 triliun USD (2020)",
+      "gdprank": "16",
+      "currency": "Rupiah (IDR)",
+      "timezone": "UTC+7-UTC+9",
+      "phone": "+62",
+      "net": ".id"
+    }
+  ],
+  "unique": [
+    {
+      "negaramaju": "AS dalam Organisasi Perdagangan Dunia (WTO) Sabtu (22/2/2020) telah menggolongkan Indonesia ke dalam kategori negara maju bersama dengan Brazil, India, Afrika Selatan, dan Argentina.",
+      "totalarea": "Jika total wilayah Indonesia diukur dari darat, laut, dan ZEE (Zona Ekonomi Eksklusif), Indonesia memiliki luas sebesar 8,3 juta km persegi dan membuatnya menjadi negara terbesar ke-6 di dunia. Sayangnya perhitungan luas negara hanya dilihat dari luas wilayah darat.",
+      "totallang": "Indonesia memiliki lebih dari 700 bahasa daerah dengan bahasa Jawa dengan bahasa daerah terbesar (84,3 juta orang) menjadikan Indonesia sebagai negara dengan bahasa terbanyak kedua di dunia.",
+      "asiangames": "Asian Games ke-IV pada tahun 1962 berlangsung di Jakarta dan dibuka langsung oleh Presiden Soekarno, kemudian pada tahun 2018 berlangsung Asian Games ke-XVIII di Jakarta dan Palembang dan dibuka oleh Presiden Joko Widodo.",
+      "continent": "Indonesia merupakan negara antarbenua (Asia-Oceania) karena terletak tepat di perbatasan lempeng tektonik benua Asia dan Oceania."
+    }
+  ]
+}
