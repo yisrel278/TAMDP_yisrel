@@ -31,7 +31,7 @@ export default function ProfileScreen({ navigation }) {
       </View>
       <View>
         <Text style={styles.aboutContent}>{data.text}</Text>
-        <Text style={styles.aboutContent}>{data.name}</Text>
+        <Text style={styles.aboutContent}>{data.name}.</Text>
       </View>
     </View >
   );
@@ -47,5 +47,6 @@ const styles = StyleSheet.create({
   aboutContent: {
     fontSize: 17,
     padding: 15,
+    color: '#323232'
   }
 })
